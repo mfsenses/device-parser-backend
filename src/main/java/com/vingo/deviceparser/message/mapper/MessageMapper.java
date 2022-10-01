@@ -3,14 +3,20 @@ package com.vingo.deviceparser.message.mapper;
 import java.util.List;
 
 import org.mapstruct.Mapper;
+import org.mapstruct.factory.Mappers;
 
-import com.vingo.deviceparser.message.dao.entity.Message;
+import com.vingo.deviceparser.message.api.output.MessageOutput;
+import com.vingo.deviceparser.message.dao.entity.MessageEntity;
 import com.vingo.deviceparser.message.dto.MessageDTO;
 
-@Mapper
-public interface MessageMapper {
+@Mapper(componentModel="spring")
+public abstract class MessageMapper {
 
-	MessageDTO toDTO(Message message);
+	public abstract MessageDTO toDTO(MessageEntity message);
 	
-	List<MessageDTO> toDTOList(List<Message> message);
+	public abstract MessageOutput toDTO(MessageDTO message);
+	
+	public abstract List<MessageDTO> toDTOList(List<MessageEntity> messages);
+
+	public abstract List<MessageOutput> toDTOListOutput(List<MessageDTO> messages);
 }

@@ -1,8 +1,8 @@
-package com.vingo.deviceparser.message.dto;
+package com.vingo.deviceparser.message.api.output;
 
 import java.util.Date;
 
-import com.vingo.deviceparser.common.dto.BaseDTO;
+import com.vingo.deviceparser.common.api.output.BaseOutput;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,7 +13,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class MessageDTO extends BaseDTO {
+public class MessageOutput extends BaseOutput {
 	private String id;
 	private String message;
 	private Date createdDate;
