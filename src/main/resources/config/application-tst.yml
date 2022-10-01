@@ -3,6 +3,3 @@ spring:
     mongodb:
       uri: mongodb+srv://doadmin:6rh94831ekQXV50t@db-mongodb-ams3-49022-d166cd2b.mongo.ondigitalocean.com/device-parser?tls=true&authSource=admin&replicaSet=db-mongodb-ams3-49022
       database: device-parser
-  mvc:
-    pathmatch:
-      matching-strategy: ant-path-matcher
